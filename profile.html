@@ -57,6 +57,11 @@
       .more-apps b { font-size:15px; letter-spacing:-.02em; white-space:nowrap; }
       .more-apps span { flex:1; font-size:13.5px; color:var(--muted); }
       .more-apps i { font-style:normal; font-size:13px; }
+      .more-apps .dual { display:flex; align-items:baseline; gap:16px; padding:15px 4px; }
+      .more-apps .dual b { font-size:15px; letter-spacing:-.02em; white-space:nowrap; }
+      .more-apps .dual span { flex:1; font-size:13.5px; color:var(--muted); }
+      .more-apps .dual a { font-size:12.5px; font-weight:600; border-bottom:1px solid var(--ink); padding:0 0 1px; }
+      .more-apps li:has(.dual) a:hover { background:none; }
       .all-apps-link { margin:26px 0 0; }
       .all-apps-link a { font-size:13.5px; font-weight:600; border-bottom:1px solid var(--ink); padding-bottom:2px; }
 
@@ -150,7 +155,7 @@
           </article>
         </div>
         <ul class="more-apps">
-          <li><a href="https://apps.apple.com/us/app/reelroutes/id6769453833" target="_blank" rel="noreferrer"><b>ReelRoutes</b><span>Turn your trips into cinematic animated travel reels on a map</span><i>↗</i></a></li>
+          <li><div class="dual"><b>ReelRoutes</b><span>Turn your trips into cinematic animated travel reels on a map</span><a href="https://apps.apple.com/us/app/reelroutes/id6769453833" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a><a href="https://play.google.com/store/apps/details?id=com.vuolt.routereels" target="_blank" rel="noreferrer">Google&nbsp;Play&nbsp;↗</a></div></li>
           <li><a href="https://apps.apple.com/us/app/one-second-challenge/id6768998129" target="_blank" rel="noreferrer"><b>One Second Challenge</b><span>Trust your internal clock — 7 timing modes, pass-and-play multiplayer</span><i>↗</i></a></li>
           <li><a href="https://apps.apple.com/us/app/borderchain/id6768246076" target="_blank" rel="noreferrer"><b>Borderchain</b><span>Chain borders and name neighbours — a relaxing geography puzzle</span><i>↗</i></a></li>
           <li><a href="https://apps.apple.com/us/app/german-a1-quiz-app/id6739214594" target="_blank" rel="noreferrer"><b>German A1 Quiz</b><span>Master A1 German grammar with flashcards & quizzes — 100% offline</span><i>↗</i></a></li>
