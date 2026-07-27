@@ -42,6 +42,13 @@
       .app-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
       .app { background:#fff; border:1px solid var(--line); padding:28px 26px 26px; display:flex; flex-direction:column; gap:14px; box-shadow:8px 9px 0 rgba(24,32,39,.07); }
       .app .app-type { font:11px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:0; }
+      .app-icon { width:58px; height:58px; border-radius:14px; box-shadow:0 4px 14px rgba(24,32,39,.18); }
+      .app-head { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+      .more-apps .dual img { width:32px; height:32px; border-radius:8px; align-self:center; box-shadow:0 2px 8px rgba(24,32,39,.15); }
+      .org-logo { display:inline-flex; align-items:center; height:24px; margin-bottom:14px; }
+      .org-logo img { height:22px; width:auto; display:block; }
+      .org-logo { gap:10px; }
+      .logo-sep { color:var(--muted); }
       .app h3 { margin:0; font-size:24px; letter-spacing:-.04em; }
       .app p.desc { margin:0; font-size:14px; line-height:1.55; flex:1; }
       .tags { display:flex; flex-wrap:wrap; gap:6px; }
@@ -70,6 +77,10 @@
       .xp .org { font-size:14px; color:var(--muted); margin:0 0 8px; }
       .xp p.note { margin:0; font-size:14px; line-height:1.55; max-width:640px; }
       .edu-note { margin:26px 0 0; font-size:14px; color:var(--muted); }
+      .edu-row { display:flex; flex-wrap:wrap; gap:14px; margin-top:30px; }
+      .edu-row .org-logo { margin-bottom:0; height:auto; gap:12px; }
+      .edu-row .org-logo img { height:30px; }
+      .edu-row span { font-size:13.5px; font-weight:600; }
 
       /* Letter */
       .letter-paper { background:#f9f6ef; border:1px solid var(--line); box-shadow:10px 12px 0 rgba(24,32,39,.08); padding:clamp(30px,5vw,60px); font-family:"Playfair Display",serif; font-size:17.5px; line-height:1.58; max-width:760px; }
@@ -102,8 +113,8 @@
     <header class="site-header">
       <a class="wordmark" href="index.html">THEJ<span>.</span></a>
       <nav aria-label="Main navigation">
-        <a href="#apps">Apps</a>
         <a href="#experience">Experience</a>
+        <a href="#apps">Apps</a>
         <a href="#letter">Cover letter</a>
         <a href="#cv">CV</a>
       </nav>
@@ -114,8 +125,8 @@
       <section class="intro">
         <p class="eyebrow">Profile · Berlin, Germany</p>
         <h1>Thej Siddhotam</h1>
-        <p class="role">Staff Technical Program Manager · Developer & Product Builder</p>
-        <p class="intro-copy">Simplifying technology for 15+ years at Microsoft, Amazon, Philips, and DoorDash·Wolt. I span the full spectrum — developer, program manager, product manager, and project manager — writing code, shaping products, and running the programs that deliver them. Outside of work, I design, build, and ship my own apps end to end.</p>
+        <p class="role">Staff Technical Program Manager</p>
+        <p class="intro-copy">15+ years leading programs, products, and projects at Microsoft, Amazon, Philips, and DoorDash·Wolt — post-merger platform unification, multi-team delivery across timezones, systems operating at global scale. I also ship my own apps on the side: staying hands-on keeps my technical judgment sharp and my product decisions honest.</p>
         <div class="contact-row">
           <a class="chip solid" href="mailto:thej.siddhotam@outlook.com">Email me</a>
           <a class="chip" href="https://www.linkedin.com/in/thej-siddhotam/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
@@ -124,64 +135,31 @@
         </div>
       </section>
 
-      <section id="apps">
-        <p class="eyebrow">01 / Vuolt — my indie studio</p>
-        <h2>Apps on the <em>App Store.</em></h2>
-        <p class="section-lede">I design, code, and ship every app solo under my studio, <a href="https://vuolt.github.io" target="_blank" rel="noreferrer">Vuolt</a> — small, characterful apps and games.</p>
-        <div class="app-grid">
-          <article class="app">
-            <p class="app-type">Game · iOS & Android</p>
-            <h3>Missed Flight</h3>
-            <p class="desc">An endless airport runner with a heart. Sprint through the terminal, leap suitcases, and race the boarding timer across 12 international airports — together.</p>
-            <div class="tags"><span>Endless runner</span><span>Daily challenges</span></div>
-            <div class="store-links"><a class="more" href="https://apps.apple.com/us/app/missed-flight/id6779718370" target="_blank" rel="noreferrer">App Store ↗</a><a class="more" href="https://play.google.com/store/apps/details?id=com.vuolt.missedflight" target="_blank" rel="noreferrer">Google Play ↗</a></div>
-          </article>
-          <article class="app">
-            <p class="app-type">Productivity · iOS & macOS</p>
-            <h3>Call My Meeting</h3>
-            <p class="desc">Never miss another meeting. A loud alarm before every meeting, with one tap to join — fully on-device, nothing leaves your calendar.</p>
-            <div class="tags"><span>On-device</span><span>Calendar</span><span>One-tap join</span></div>
-            <a class="more" href="https://apps.apple.com/us/app/call-my-meeting/id6782694054" target="_blank" rel="noreferrer">App Store ↗</a>
-          </article>
-          <article class="app">
-            <p class="app-type">Lifestyle · iOS</p>
-            <h3>Breakup Counter</h3>
-            <p class="desc">A private, gentle companion for rebuilding after a breakup — track your days since last contact, heal, reset, and move forward.</p>
-            <div class="tags"><span>Privacy-first</span><span>No-contact tracker</span><span>Journaling</span></div>
-            <a class="more" href="https://apps.apple.com/us/app/breakup-counter/id6760018086" target="_blank" rel="noreferrer">App Store ↗</a>
-          </article>
-        </div>
-        <ul class="more-apps">
-          <li><div class="dual"><b>ReelRoutes</b><span>Turn your trips into cinematic animated travel reels on a map</span><a href="https://apps.apple.com/us/app/reelroutes/id6769453833" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a><a href="https://play.google.com/store/apps/details?id=com.vuolt.routereels" target="_blank" rel="noreferrer">Google&nbsp;Play&nbsp;↗</a></div></li>
-          <li><div class="dual"><b>One Second Challenge</b><span>Trust your internal clock — 7 timing modes, pass-and-play multiplayer</span><a href="https://apps.apple.com/us/app/one-second-challenge/id6768998129" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a></div></li>
-          <li><div class="dual"><b>Borderchain</b><span>Chain borders and name neighbours — a relaxing geography puzzle</span><a href="https://apps.apple.com/us/app/borderchain/id6768246076" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a></div></li>
-          <li><div class="dual"><b>German A1 Quiz</b><span>Master A1 German grammar with flashcards & quizzes — 100% offline</span><a href="https://apps.apple.com/us/app/german-a1-quiz-app/id6739214594" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a></div></li>
-        </ul>
-        <p class="all-apps-link"><a href="https://apps.apple.com/us/developer/thej-kumar-siddhotam-arulraj/id1781177167" target="_blank" rel="noreferrer">All apps on my App Store developer page ↗</a></p>
-      </section>
-
       <section id="experience">
-        <p class="eyebrow">02 / Experience</p>
-        <h2>Where I've <em>worked.</em></h2>
+        <p class="eyebrow">01 / Experience</p>
+        <h2>A record of <em>delivery.</em></h2>
         <div class="xp">
           <div class="when">Jan 2025 — Jan 2026<br />Berlin, Germany</div>
           <div>
+            <div class="org-logo"><img src="assets/logos/doordash-wolt.png" alt="DoorDash and Wolt logos" style="height:18px" /></div>
             <h3>Staff Technical Program Manager</h3>
             <p class="org">DoorDash · Wolt</p>
-            <p class="note">Set policies preventing SMS-pumping fraud (€600K saved). Led post-merger platform unification between DoorDash and Wolt, and scaled platforms to support super-mega stores with 40K+ SKUs.</p>
+            <p class="note">Ran the post-merger program unifying DoorDash and Wolt platforms — aligning engineering and business stakeholders across two organisations. Drove the program scaling platforms for super-mega stores with 40K+ SKUs, and set anti-fraud policy that saved €600K.</p>
           </div>
         </div>
         <div class="xp">
           <div class="when">Jul 2016 — Oct 2024<br />Luxembourg</div>
           <div>
+            <div class="org-logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_logo.svg?width=300" alt="Amazon logo" style="height:21px; margin-top:5px" /></div>
             <h3>Principal Technical Program Manager</h3>
             <p class="org">Amazon</p>
-            <p class="note">Launched scanning technology for EU sort centers, externalized Amazon's Warehouse Management System for third-party partners, drove inbound standardization across 7 engineering teams in 3 timezones, and delivered the compliance designs behind Amazon's first warehouse in Turkey.</p>
+            <p class="note">Eight years running large cross-functional programs: led 7 engineering teams across 3 timezones to standardize inbound operations, launched scanning technology across EU sort centers, externalized Amazon's Warehouse Management System to third-party partners, and delivered the compliance program behind Amazon's first warehouse in Turkey.</p>
           </div>
         </div>
         <div class="xp">
           <div class="when">Dec 2015 — Mar 2016<br />Eindhoven, Netherlands</div>
           <div>
+            <div class="org-logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Philips_logo_new.svg?width=300" alt="Philips logo" style="height:14px" /></div>
             <h3>Change Manager</h3>
             <p class="org">Philips</p>
             <p class="note">Modernized the employee helpdesk from phone-based care to a social-media-style experience; migrated the knowledge base to ServiceNow.</p>
@@ -190,12 +168,53 @@
         <div class="xp">
           <div class="when">Jun 2007 — Oct 2014<br />Hyderabad, India</div>
           <div>
+            <div class="org-logo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_%282012%29.svg?width=300" alt="Microsoft logo" style="height:20px" /></div>
             <h3>Software Development Engineer 2</h3>
             <p class="org">Microsoft</p>
-            <p class="note">Developer, Scrum Master, and program manager across Visual Studio UI-testing tools (v10–13); managed external engineering teams and partnerships with Infragistics and DevExpress.</p>
+            <p class="note">Grew from developer into Scrum Master and program manager on Visual Studio UI-testing tools (v10–13) — mentoring engineers, managing external engineering teams at partner AppPoint, and running partnerships with Infragistics and DevExpress.</p>
           </div>
         </div>
-        <p class="edu-note">MBA, Rotterdam School of Management · BTech Computer Science, NIT Warangal · English, Hindi, Telugu, German</p>
+        <div class="edu-row">
+          <div class="org-logo"><img src="assets/logos/rsm.png" alt="Rotterdam School of Management logo" /><span>MBA, Rotterdam School of Management</span></div>
+          <div class="org-logo"><img src="assets/logos/nit.png" alt="NIT Warangal logo" /><span>BTech Computer Science, NIT Warangal</span></div>
+        </div>
+        <p class="edu-note">Languages: English, Hindi, Telugu, German</p>
+      </section>
+
+      <section id="apps">
+        <p class="eyebrow">02 / Vuolt — my indie studio</p>
+        <h2>Apps on the <em>App Store.</em></h2>
+        <p class="section-lede">Side projects, shipped like products — I design, build, and launch every app solo under my studio, <a href="https://vuolt.github.io" target="_blank" rel="noreferrer">Vuolt</a>. Each one is an end-to-end product decision: scoping, roadmap, build, launch.</p>
+        <div class="app-grid">
+          <article class="app">
+            <div class="app-head"><p class="app-type">Game · iOS & Android</p><img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e0/cd/49/e0cd49bb-01f9-f8e6-f42c-8a9e8577b1d6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/256x256bb.jpg" alt="Missed Flight app icon" loading="lazy" /></div>
+            <h3>Missed Flight</h3>
+            <p class="desc">An endless airport runner with a heart. Sprint through the terminal, leap suitcases, and race the boarding timer across 12 international airports — together.</p>
+            <div class="tags"><span>Endless runner</span><span>Daily challenges</span></div>
+            <div class="store-links"><a class="more" href="https://apps.apple.com/us/app/missed-flight/id6779718370" target="_blank" rel="noreferrer">App Store ↗</a><a class="more" href="https://play.google.com/store/apps/details?id=com.vuolt.missedflight" target="_blank" rel="noreferrer">Google Play ↗</a></div>
+          </article>
+          <article class="app">
+            <div class="app-head"><p class="app-type">Productivity · iOS & macOS</p><img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/fb/47/6a/fb476aee-e875-ddeb-83db-7bf70352b12e/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/256x256bb.jpg" alt="Call My Meeting app icon" loading="lazy" /></div>
+            <h3>Call My Meeting</h3>
+            <p class="desc">Never miss another meeting. A loud alarm before every meeting, with one tap to join — fully on-device, nothing leaves your calendar.</p>
+            <div class="tags"><span>On-device</span><span>Calendar</span><span>One-tap join</span></div>
+            <a class="more" href="https://apps.apple.com/us/app/call-my-meeting/id6782694054" target="_blank" rel="noreferrer">App Store ↗</a>
+          </article>
+          <article class="app">
+            <div class="app-head"><p class="app-type">Lifestyle · iOS</p><img class="app-icon" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dc/83/33/dc8333b5-6c19-5b59-ae06-8c7ca73424ba/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/256x256bb.jpg" alt="Breakup Counter app icon" loading="lazy" /></div>
+            <h3>Breakup Counter</h3>
+            <p class="desc">A private, gentle companion for rebuilding after a breakup — track your days since last contact, heal, reset, and move forward.</p>
+            <div class="tags"><span>Privacy-first</span><span>No-contact tracker</span><span>Journaling</span></div>
+            <a class="more" href="https://apps.apple.com/us/app/breakup-counter/id6760018086" target="_blank" rel="noreferrer">App Store ↗</a>
+          </article>
+        </div>
+        <ul class="more-apps">
+          <li><div class="dual"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b3/87/4f/b3874fa7-b336-7642-52b9-7cae10807700/AppIcon-0-0-1x_U007epad-0-1-85-220.png/128x128bb.jpg" alt="" loading="lazy" /><b>ReelRoutes</b><span>Turn your trips into cinematic animated travel reels on a map</span><a href="https://apps.apple.com/us/app/reelroutes/id6769453833" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a><a href="https://play.google.com/store/apps/details?id=com.vuolt.routereels" target="_blank" rel="noreferrer">Google&nbsp;Play&nbsp;↗</a></div></li>
+          <li><div class="dual"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/0d/3a/200d3a11-9eed-a944-d8cd-ea8993fab218/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/128x128bb.jpg" alt="" loading="lazy" /><b>One Second Challenge</b><span>Trust your internal clock — 7 timing modes, pass-and-play multiplayer</span><a href="https://apps.apple.com/us/app/one-second-challenge/id6768998129" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a></div></li>
+          <li><div class="dual"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/93/6f/27/936f2725-7399-75c2-8bb9-869b89fdb53f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/128x128bb.jpg" alt="" loading="lazy" /><b>Borderchain</b><span>Chain borders and name neighbours — a relaxing geography puzzle</span><a href="https://apps.apple.com/us/app/borderchain/id6768246076" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a></div></li>
+          <li><div class="dual"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/05/c8/f9/05c8f94c-dd3f-4f0b-256e-0648934cd0a8/AppIcon-0-0-1x_U007epad-0-1-85-220.jpeg/128x128bb.jpg" alt="" loading="lazy" /><b>German A1 Quiz</b><span>Master A1 German grammar with flashcards & quizzes — 100% offline</span><a href="https://apps.apple.com/us/app/german-a1-quiz-app/id6739214594" target="_blank" rel="noreferrer">App&nbsp;Store&nbsp;↗</a></div></li>
+        </ul>
+        <p class="all-apps-link"><a href="https://apps.apple.com/us/developer/thej-kumar-siddhotam-arulraj/id1781177167" target="_blank" rel="noreferrer">All apps on my App Store developer page ↗</a></p>
       </section>
 
       <section id="letter">
@@ -206,7 +225,7 @@
           <p>Dear Hiring Team,</p>
           <p>I'm a Technical Program Manager with 15+ years across Microsoft, Amazon, Philips, and DoorDash·Wolt, and a track record of turning complex, ambiguous problems into shipped systems. Most recently at Wolt, I led the post-merger program unifying DoorDash and Wolt platforms and put policies in place that stopped SMS-pumping fraud — saving €600K.</p>
           <p>At Amazon, I spent eight years as a Principal TPM building the machinery of fulfilment: launching scanning technology across EU sort centers, externalizing Amazon's Warehouse Management System for third-party partners, and driving standardization across seven engineering teams in three timezones. I started as an engineer at Microsoft, and that foundation still shapes how I work — I stay close to the architecture, the data, and the trade-offs.</p>
-          <p>What sets me apart is that I work across every discipline it takes to ship: I write code as a developer, define products as a product manager, and run delivery as a program and project manager. My indie studio, Vuolt, is proof — seven apps on the App Store, each one designed, coded, and launched solo. I bring an engineer's rigour, an MBA's commercial lens, and a maker's bias for shipping.</p>
+          <p>My centre of gravity is program and product leadership — aligning teams, de-risking delivery, and making the calls that get complex things shipped. What sets me apart is that I can go as deep as the work requires: I define products as a product manager, run delivery as a program and project manager, and still read and write the code when it matters. I bring an engineer's rigour, an MBA's commercial lens, and a maker's bias for shipping.</p>
           <p>I'd welcome a conversation about how I can help your team deliver programs that matter.</p>
           <p>Kind regards,<br /><strong>Thej Siddhotam</strong><br /><a href="mailto:thej.siddhotam@outlook.com" style="font-family:'DM Sans',sans-serif;font-size:14px;border-bottom:1px solid var(--ink);">thej.siddhotam@outlook.com</a></p>
         </article>
